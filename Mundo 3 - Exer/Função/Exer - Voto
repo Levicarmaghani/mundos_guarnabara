@@ -1,0 +1,24 @@
+# Faça um progrma que tenha a função Voto
+# Vai receber o ano de nascimento como parametro 
+# Retornando o valor litoral  indicando se a pessoa tem o voto negado 
+# opcional ou obrigarorio nas eleições 
+
+# Criando função
+def voto(ano):
+    # Importando função para analisar a data atual 
+    from datetime import date
+    ano_atual = date.today().year
+    idade = ano_atual - ano  
+
+    if idade < 16:
+        return f"Com idade {idade} você não pode votar."
+    elif 16 <= idade < 18 or idade > 65:
+        return f"Com idade {idade} o voto é opcional."
+    else:
+        return f"Com idade {idade} o voto é obrigatório."
+
+# Recebe o ano de nascimento do usuário
+usuario = int(input("Digite o ano de nascimento: "))
+# Chama a função e imprime o resultado
+print(voto(usuario))
+

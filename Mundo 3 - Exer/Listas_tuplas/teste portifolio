@@ -1,0 +1,99 @@
+# Funções de operação
+def soma(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    return a / b
+
+def tabuada():
+    valor1 = int(input("Digite o valor para ver sua tabuada: "))
+    for contador in range(0, 11):
+        print(f"{valor1} X {contador} = {valor1 * contador}")
+
+def valores():
+    valor1 = int(input("Digite o primeiro valor: "))
+    valor2 = int(input("Digite o segundo valor: "))
+    return valor1, valor2
+
+# Função de apresentação do portfólio
+def apresentar_portfolio():
+    print("****************************")
+    print("Portfólio de Levi Agustinho Carmaghani")
+    print("****************************")
+    print("\nHabilidades principais:")
+    print("- Importação de bibliotecas")
+    print("- Funções")
+    print("- Listas")
+    print("- Dicionários")
+    print("- Estruturas de controle e repetição\n")
+    
+    print("Projetos:")
+    print("1. Calculadora usando funções")
+    print("2. Tabuada interativa\n")
+    
+    print("Contato:")
+    print("Email: leviagustinho@outlook.com")
+    print("LinkedIn: https://www.linkedin.com/in/levi-a-carmaghani-490a08221/")
+    print("GitHub: https://github.com/Levicarmaghani")
+    print("\n****************************")
+
+# Função principal
+def executar_calculadora():
+    while True:
+        print("-=" * 30)
+        usuario = int(input("""
+Você deseja:
+[1] SOMAR
+[2] SUBTRAIR
+[3] MULTIPLICAR
+[4] DIVIDIR
+[5] VER TABUADA
+Escolha uma opção: 
+"""))
+
+        while usuario not in [1, 2, 3, 4, 5]:
+            print("-=" * 30)
+            print("OPÇÃO INVÁLIDA, TENTE NOVAMENTE")
+            usuario = int(input("Escolha uma opção válida [1] - [5]: "))
+
+        if usuario == 1:
+            valor1, valor2 = valores()
+            resultado = soma(valor1, valor2)
+            print(f"Resultado de {valor1} + {valor2} = {resultado}")
+        elif usuario == 2:
+            valor1, valor2 = valores()
+            resultado = subtracao(valor1, valor2)
+            print(f"Resultado de {valor1} - {valor2} = {resultado}")
+        elif usuario == 3:
+            valor1, valor2 = valores()
+            resultado = multiplicacao(valor1, valor2)
+            print(f"Resultado de {valor1} * {valor2} = {resultado}")
+        elif usuario == 4:
+            valor1, valor2 = valores()
+            resultado = divisao(valor1, valor2)
+            print(f"Resultado de {valor1} / {valor2} = {resultado}")
+        elif usuario == 5:
+            tabuada()
+
+        continuar = input("Deseja continuar? (S/N): ").strip().upper()
+        while continuar not in ["S", "N"]:
+            continuar = input("Digite 'S' para continuar ou 'N' para parar: ").strip().upper()
+        
+        if continuar == "N":
+            print("-=" * 30)
+            print("FIM DO PROGRAMA.")
+            break
+
+# Exibindo portfólio e interagindo com a calculadora
+def main():
+    apresentar_portfolio()  # Exibe as informações do portfólio
+    executar_calculadora()   # Inicia a calculadora interativa
+
+if __name__ == "__main__":
+    main()

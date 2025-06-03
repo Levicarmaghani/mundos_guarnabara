@@ -1,0 +1,8 @@
+# Crie um programa que tenha uma tupla com varias palavras 
+# Depois disso deve mostra para cada palavras quais são suas vogais 
+lista = ('Skate', 'Bicicleta', 'Patins', 'Futebol', 'Patinet', 'Patinete', 'Volei', 'Parkur', 'Basquete')
+for palavra in lista: # pAra cada palavra dentro da minha lista
+    print(f"\nEm sua palavra, {palavra.upper()} temos ", end = '')
+    for letra in palavra:# Para cada letra dentro da minha palavra 
+        if letra.lower() in 'aeiou':
+            print(letra, end= ' ')

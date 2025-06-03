@@ -1,0 +1,31 @@
+# Crie um programa onde 4 jogadores jogue um dado de 0 a 6 e tenham resultados aleatorios 
+# Guaradando esse resultado em dicionario 
+# No final coloque esse dicionario em ordem 
+# Sabendo que o vencedor tirou o maior múmero do dado 
+
+from random import randint
+from time import sleep
+# O itemgetter voce pode criar uma função que vai "pegar" um item especifico ou (itens) de cada elemento de uma sequencia 
+from operator import itemgetter
+
+dados = dict()
+jogadores = { 'jogador1': randint(1, 6),
+            'jogador2': randint(1, 6),
+            'jogador3': randint(1, 6),
+            'jogador4': randint(1, 6)}
+# Para cada jogador e seu número do me dicionario. items
+for jogador, numero in jogadores.items():
+    sleep(1)
+    print(f"O {jogador} tirou o número {numero}")
+
+# Colocando em ordem de ranking os jogadores 
+
+# key=itemgetter(1) ele indica que a ordenação de ve ser feita pelo segundo item do dicinario 
+# Itemgetter (1) é uma  função, que quando aplicada a uma tupla retorna o segundo valor do número da pontuação)
+ranking = {}
+ranking = sorted(jogadores.items(), key=itemgetter(1), reverse=True)
+# Reverse True indica que a ordenação deve ser feita em ordem decresente, ou seja os maiores valores aparecerão primeiro 
+print()
+for indece, jogador in enumerate(ranking):
+    sleep(1)
+    print(f"{indece +1 }° lugar: {jogador[0]} com o número {jogador[1]}.")

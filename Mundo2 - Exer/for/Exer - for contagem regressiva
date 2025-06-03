@@ -1,0 +1,9 @@
+# Faça um programa que mostra na tela uma contagem regrssiva 
+# Para estouto de fogos de arteficios 
+# indo de 10 até de 0 com uma pausa de 1 segundo entre eles 
+
+from time import sleep # importei sleep da biblioteca tempo
+for c in range(10, 0, -1): # De 10 até em contagem regressiva de um em um. laço com for
+   sleep(1) # sleep conta o tempo de pausa
+   print(f"{c}") # é uma variavel que atribui o valor do número da contagem regressiva
+print("Feliz Ano Novo") # Quando o laço de for executa até onde ele foi programado ele passa para o proximi bloco 

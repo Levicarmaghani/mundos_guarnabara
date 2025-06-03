@@ -1,0 +1,26 @@
+# Desenvolva um programa que leia o preimeiro termo
+# A razão de uma PA. 
+# No final, mostre os 10 primeios termos dessa progressão
+print("-=" * 20)
+print(f"TERMO PA")
+termo = int(input("Qual é o termo: "))
+razao = int(input("Qual é a razão: "))
+termo = termo
+contador = 0
+mais = 10 # Defini o mais, com 10 vezes por que o programa pede 10  termos
+total = 0 # Total de termos a ser mostrados começando valendo 0 
+while mais != 0: # O (mais começa valendo 10 vezes que laço vai se repetir, depois ele se repete a quantidade 
+    # de vezes que o usuario pede, la embaixo 
+    total = mais + total # Aqui nosso total passa a receber 10, depois ele passa a receber o valor que o usuario
+    # coloca no mais 
+    while contador <= total: # Enquanto o contador que vale 0 for menor que o valor total do usuario o laço
+         # vai se repetir 
+         print(f"{termo}  ")
+         termo += razao
+         contador += 1
+    mais = int(input('Mais quantos termos voce quer mostrar:')) # Quando usuario digita a quantidade que 
+    # deve ser mostrada ela vai ser armazenada na variavel MAIS
+print(f"{contador} vezes", end = " " )
+print('fim')
+# Se o mais for diferente de 0 passa para proxima etapa qua vai fazer a soma ( mais  + total ) o total 
+# já esta valendo 10, 

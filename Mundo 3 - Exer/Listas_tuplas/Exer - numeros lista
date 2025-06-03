@@ -1,0 +1,30 @@
+# Crie um programa que vai ler varios números e vai colocar em uma lista
+# Depois disso mostre 
+# A) Quantos números foram digitados 
+# B) A lista de valores ordenados de forma decresente
+# C) Se o valor 5 foi digitado está ou não na lista
+lista = []
+while True:
+    print('-=' * 20)
+    valores = int(input("Digite um valor: "))
+    lista.append(valores)
+    
+    continuar = str(input("Deseja continuar (S/N)")).strip().upper()
+    while continuar not in "SN":
+        print("DIGITO INALIDO DIGITE 'S' OU 'N' ")
+        continuar = str(input("Deseja continuar (S/N)")).strip().upper()
+    if continuar == "S":
+        continue
+    else: 
+        break
+
+lista.sort(reverse = True)
+print(f"""
+Foram digitados {len(lista)} Valores
+Sua lista em forma decresente{lista}
+""")
+if 5 in lista:
+    print(f"O valor 5 está na lista na posição {lista.index(5)}") #index procura a posição do item
+else:
+    print(f"O valor 5 não esta na lista")
+    

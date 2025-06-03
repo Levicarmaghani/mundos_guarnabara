@@ -1,0 +1,11 @@
+# Duplas qunado voce consegue colocar mais elementos em uma varial
+lanche = ("Hambuguer", "Suco", "Pizza", "Pudim")
+# Tublas são imutaveis 
+contador = 0
+"""
+for comida in lanche:
+   print(f"{comida}")
+"""
+
+for contador in range (0, len(lanche)):
+   print(f"Eu vou comer {lanche[contador]} na posição {contador}")

@@ -1,0 +1,22 @@
+# Crie um programa onde o usuario digite uma expresão qualquer que use parenteses
+# Seu aplicativo devera analisa se sua expreção passa está com parenteses abertos e fechaos em ordem correta
+exprecao = str(input("Digite uma expressão para ver se esta certa:  "))
+pilha = []
+# Para cada simbolo dentro da minha expressão
+for simbolo in exprecao:
+    if simbolo == "(": # Se o simbolo for parentese abrindo
+        pilha.append("(") #Adciona ela na minha lista 
+
+    elif simbolo == ")": # Se  o simbolo for igual fechando
+        if len(pilha) > 0: # Dentro da minha pilha ele for maior que zero sinal que tenha a mais 
+            pilha.pop()  # por favor remove 
+        
+        # Se dentro da minha lista estiver algum parentese fechando para o programa
+        else:
+            pilha.append(")")
+            break
+
+if len(pilha) == 0:
+    print("Sua expressão es´ta certa ")
+else:
+    print('Sua expressão está errada')

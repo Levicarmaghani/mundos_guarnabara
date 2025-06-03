@@ -1,0 +1,17 @@
+# faça um programa que tenha uma função chamada área
+# Ela vai receber as dimensões de um terreno retangular 
+# largura e comprimento 
+# Mostre a área do terreno 
+
+# Criando minha função
+def area(largura, comprimento ):
+    resultado = largura * comprimento
+    print(f"A area do seu terreno {largura}m {comprimento}m é {resultado}m metros quadrados")
+
+
+# Quando eu chamei minha função area ela retorna pra a largura que p usuario, digitou o comprimento que o usuario digitou, e o resultado que foi feito na função area  
+largura = float(input(" Qual é o tamanho da largura do terreno?(m) "))
+comprimento = float(input(" Qual é o comprimento do terrano?(m) "))
+area(largura, comprimento)
+    
+

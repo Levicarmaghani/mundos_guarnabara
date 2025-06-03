@@ -1,0 +1,14 @@
+# Escreva um programa que pergunte a quantidade de KM, Percorrido por um carro alugado 
+# A quantidades de dias que ele foi alugadoado 
+# Calcule o preço a pagar 
+# Sabendo que a diaria custa R$60
+# R$0,15 por Km rodado
+
+quantidade_de_km = float(input("Quantos Km voce rodou com esse veiculo: "))
+diaria_veiculo = float(input("Quantos dias o veiculo foi alugado? "))
+
+valor_km = (quantidade_de_km * 0.15)
+valor_diaria = (diaria_veiculo * 60)
+valor_total = valor_diaria + valor_km
+print(f"Valor por Km rodado R$0,16:\nQuantidade de Km que voce rodou: {quantidade_de_km:.3f}")
+print(f"Valor da diaria, R$60:\nDias alugados: {diaria_veiculo:.0f}:\nValor total a pagar: R${valor_diaria:.2f} ")

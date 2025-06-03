@@ -1,0 +1,53 @@
+# Crie um programa que leia o nome e preço de varios produtos
+# O prgrama devera perguntar se o usúario vai continuar e no final, mostre :
+# A) Qual é total gasto na compras
+# B) Quantos produtos custam mais de 1.000 mil reais 
+# C) Qual é o nome dos produtos mais baratos 
+contador_mais_mil = 0
+total_compras = 0
+nome_produtos_barato = "  "
+menor_valor = float('inf')
+contador = 0
+
+
+while True:
+    print("-=" * 20)
+    # Pedindo nome e valor para o usuario
+    nome_produto = str(input("Digite o nome do produto: ")).strip()
+    valor_produto = float(input("Digite o valor do produto R$  "))
+    contador += 1
+    #Soma dos produtos 
+    total_compras += valor_produto
+
+    if valor_produto > 1000:
+        contador_mais_mil += 1
+        # Laço de decisão
+    if contador == 1 or valor_produto < menor_valor: # se laço for o primeiro
+        # ou se o valor do produto for menor que menor valor,
+        # lembre se valor do produto for menor o valor do produto passa a ser menor 
+        # EX: bola custa R$ 50,00 e arco custa R$ 80,00, (valor produto é a bola) e (menor valor é o arco)
+        # então a bola que é o valor produto que custa R$ 50,00 passa a se o menor valor nesse laço 
+        # No proximo laço ele vai verificar se a a bola é menor que o proximo produto se for vai entra dentro if 
+        nome_produtos_barato = nome_produto 
+        menor_valor = valor_produto  
+
+    # Laço de desição se o usuario deseja continuar   
+    print("-=" * 20)
+    continuar = " "
+    while continuar not in "SN":
+        continuar = str(input("Deseja continuar Sim ou Não (S/N) : ")).strip().upper()[0]
+
+    if continuar == "N":
+        break
+    elif continuar == "S":
+        continue
+print(f"""
+Valor gasto de compras R$ {total_compras:.2f}
+Total de produtos maiores de R$ 1.000 foram de {contador_mais_mil}
+Valor do protudo mais barato R$ {menor_valor:.2f} nome do produto mais barato: {nome_produtos_barato}
+""")
+
+
+        
+  
+    

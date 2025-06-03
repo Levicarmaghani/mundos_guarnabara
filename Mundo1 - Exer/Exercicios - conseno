@@ -1,0 +1,18 @@
+# Faça um programa que leia um angulo qualquer
+# mostre na tela o valor do seno, cosseno e tangente desse angulo 
+from math import radians, sin, cos, tan
+
+angulo = float(input("\033[1;36;40mdigite um angulo, para ver seu seno, cosseno, e tangente:\033[m "))
+
+seno = sin(radians(angulo))
+print(f"""\033[1;36;40mO angulo de \033[1;31;40m{angulo}
+\033[1;36;40mtem o seno de \033[1;31;40m{seno:.2f}\033[m""")
+
+cosseno = cos(radians(angulo))
+print(f"""\033[1;36;40mangulo de \33[1;31;40m{angulo}
+\033[1;36;40mtem o cosseno de \033[1;31;40m{cosseno:.2f}\033[m""")
+
+tangente = tan(radians(angulo))
+print(f"""\033[1;36;40mO angulo de \033[1;31;40m{angulo}
+\033[1;36;40mtem o tangente \033[1;31;40m{tangente:.2f}\033[m""")
+

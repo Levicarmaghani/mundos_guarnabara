@@ -1,0 +1,7 @@
+# Dicionario aula 
+pessoa = { "nome": "Levi" , "Sexo": "m" , "Idade": 29}
+# Para cada xavie dentro de pessoas 
+for xavie  in pessoa.items():
+    print(f"{xavie}")
+pessoa["nome"] = "laura"
+print(pessoa) 

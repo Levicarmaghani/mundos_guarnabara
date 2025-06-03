@@ -1,0 +1,22 @@
+# Crie um programa onde o usúario possa digitar cinco valores númericos 
+# E cadastre em uma lista ja na posição correta de inserção (sem usar o shurt{}) 
+# NO final mostre a lista ordenada na tela .
+lista = []
+for contador in range(0, 5):
+    numeros = int(input("Dígite um número: "))
+    # Se for o primeiro valor incluindo ele na lista
+    # Se meu número for maior que o ultimo elemento da lista 
+    if contador == 0 or numeros > lista[-1]:
+        lista.append(numeros)
+    else:
+        posicao = 0
+        while posicao < len(lista):
+            if numeros <= lista[posicao]:
+                lista.insert(posicao, numeros)
+                break
+            posicao += 1
+print(f"Os valores digitado foram {lista}")
+   
+
+
+   

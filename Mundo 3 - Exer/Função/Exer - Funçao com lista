@@ -1,0 +1,42 @@
+# Faça um programa que tenha uma lista chamada números e duas funções chamada sorteios()
+#  soma par () 
+# A primeira função vai sortea 5 números  vai coloca-los dentro da lista 
+# A segundafunção vai mostrar a soma entre todos os valores pares sorteados pela função anterior.
+lista_numeros = list()
+from random import randint
+from time import sleep
+# Criando função sorteio 
+def sorteio():
+    for _ in range(5): # |gerando 5 valores
+        sorteados = randint(0, 10) # Como está dentro do for o randint vai gerar 4 valores aleatorios 
+        lista_numeros.append(sorteados) # Adcionando os valores sorteado a lista de numeros 
+    print("-=" * 15)  
+    print("Sua lista de número aleatorios", flush=True)
+    sleep(0.3)
+     
+
+def soma_par(): # Minha função com soma par 
+    soma = 0
+    for numero in lista_numeros:
+        if numero % 2 == 0:
+            soma += numero # Pegando os valores da lista de números e somando 
+    print("-=" * 15)  
+    print("A soma de todos os numeros pares gerados aleatorios", flush=True)
+    sleep(0.3)
+    print(soma)
+    print("-=" * 15)  
+
+ # Chamando minha função sorteio e soma par      
+sorteio()
+print(lista_numeros)
+soma_par()
+
+
+
+        
+
+
+
+
+
+

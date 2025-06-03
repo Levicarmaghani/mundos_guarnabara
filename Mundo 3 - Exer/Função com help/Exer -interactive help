@@ -1,0 +1,66 @@
+# Fala um programa que utilize interactive Help
+# Usuario vai digitar o comando o manual vai aparecer
+# Se o usario digitar a palavra fim o programa se encerará.
+# Obs utilize cores
+
+import os  # Importa a biblioteca 'os', usada para limpar a tela do terminal
+from time import sleep
+# Dicionário contendo códigos ANSI para cores no terminal
+# Esses códigos são usados para alterar a cor do texto impresso
+cores = {
+    "vermelho": "\033[0;30;41m",
+    "verde": "\033[0;30;42m",
+    "amarelo": "\033[0;30;43m",
+    "azul": "\033[0;30;44m",
+    "roxo": "\033[0;30;45m",
+    "ciano": "\033[0;30;46m",
+    "branco": "\033[0;30;47m",
+    "reset": "\033[m"  # Reseta a cor para o padrão do terminal
+}
+
+def escreva(txt, cor="branco"):
+    """
+    Função para exibir um título formatado com cores.
+
+    Parâmetros:
+    - txt (str): Texto que será exibido dentro do título.
+    - cor (str): Cor do texto, deve ser uma chave existente no dicionário 'cores'.
+    """
+    tamanho = len(txt) + 4
+    print(f"{cor["vermelho"]}", end='')
+    print('~' * tamanho)
+    print(f'  {txt}')
+    print("~" * tamanho)
+    print(f"{cor['vermelho']}", end='')
+    sleep(1)
+def sistema_ajuda():
+    """
+    Sistema interativo de ajuda para o usuário.
+    O usuário pode digitar o nome de uma função ou biblioteca para ver sua documentação.
+    O programa só finaliza quando o usuário digita "fim".
+    """
+    while True:  # Loop infinito até o usuário digitar "fim"
+        escreva("SISTEMA DE AJUDA PyHELP", "azul")  # Exibe o título principal
+        usuario = input(f"{cores['ciano']}Função ou biblioteca > {cores['reset']}").strip()  # Solicita a entrada do usuário
+        
+        if usuario.lower() == "fim":  # Se o usuário digitar "fim", o programa encerra
+            escreva("Finalizando o Programa...", "vermelho")  # Mensagem de encerramento
+            break  # Sai do loop while
+        
+        else:  # Se o usuário inserir um comando válido, exibe a ajuda
+            escreva(f"Acessando o manual do comando '{usuario}'...", "roxo")  # Mensagem de carregamento
+            
+            # Limpa a tela para exibir a documentação de forma organizada
+            os.system("clear" if os.name == "posix" else "cls")  
+            # "clear" para Linux/macOS e "cls" para Windows
+            
+            help(usuario)  # Exibe o manual da função ou biblioteca digitada pelo usuário
+            sleep(1)
+
+# Executa o sistema de ajuda quando o script for rodada
+sleep(1)
+sistema_ajuda()
+
+
+        
+

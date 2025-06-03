@@ -1,0 +1,16 @@
+# Crie um programa que o usuario posso digitar sete valores numericos e cadastre em uma lista unica que mantem separados os valores pares e impares no final mostre os valores pares e impares em ordem cresente
+valores = list()
+listapar = list()
+listaimpar = list()
+for contador in range(0 , 7):
+    valores.append(int(input("Digite um valor: ")))
+    if valores[0] % 2 == 0:
+        listapar.append(valores[0]) 
+        valores.clear()
+    else:
+        listaimpar.append(valores[0])
+        valores.clear()
+    
+
+print(f"Valores pares {sorted(listapar)}")
+print(f"Valores impares {sorted(listaimpar)}")

@@ -1,0 +1,6 @@
+# Escreve um programa que converta uma temperatura 
+# De grau celcius °C para °F
+celsius = float (input("\033[1;34;40mDigite sua temperaturs em °C:\033[m "))
+fahrenheit = ((9 * celsius) / 5) + 32
+print(f"\033[1;31;40mSua temperatura em: {celsius}°C\nConvertido para fahrenheit: {fahrenheit}°F!\033[m")
+

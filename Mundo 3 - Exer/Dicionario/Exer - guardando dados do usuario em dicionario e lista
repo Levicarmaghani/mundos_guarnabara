@@ -1,0 +1,63 @@
+# Crie um program que leia o nome, sexo e idade de varias pessoas 
+# Guarde os dados de cada pessoa em um  dicionario. Todos os dicionarios em uma lista 
+# No final mostre
+# A) Quantas pessoas foram cadastradas 
+# B) Média idade do grupo 
+# C) Uma lista com todas as mulheres 
+# D) Uma lista com todas as pessoas com a idade acima da média 
+
+
+
+# Dicionarios e lista
+pessoas = dict()
+galera = list()
+soma =  media = 0
+
+# lup para armazena dados do usuário 
+while True:
+    pessoas.clear()
+    pessoas['Nome'] = str(input("Nome: "))
+    pessoas['Idade'] = int(input("idade: "))
+
+    # lup para armazena sexo correntamente 
+    while True:
+        pessoas['Sexo'] = str(input(" Sexo (M/f OU (O) de outros: ")).upper().strip()[0]
+        if pessoas['Sexo'] in 'FMO':
+            break
+        print("Erro por favor digite corretamente ")
+
+    # Somando todas as idades das pessoas do grupo cadastradas
+    soma += pessoas["Idade"]
+
+    # Adicona pessoas do dicionario ao grupo galera
+    galera.append(pessoas.copy())
+
+    # lup para continuar armazenado pessoas ou para 
+    continuar = str(input(" Deseja continuar (S/N): ")).upper().strip()[0]
+    while continuar not in "SN":
+        print("Erro tente novamente")
+        continuar = str(input(" Deseja continuar (S/N): ")).upper().strip()[0]
+    if continuar == "N":
+        break
+# Mostrando resultado na tela 
+print('-=' * 30)
+# A) Quantas pessoas foram cadastradas 
+print(f"-- Total de pessoas cadastradas {len(galera)}.")
+media = soma / len(galera)
+
+# B) Média idade do grupo 
+print(f"-- Media idade do grupo é de {media:.2f}.")
+
+# C) Uma lista com todas as mulheres 
+for pessoa in galera:
+    if pessoa['Sexo'] == "F":
+        print(f"--Mulher cadastradas {pessoa['Nome']}")
+        
+# D) Uma lista com todas as pessoas com a idade acima da média 
+for pessoa in galera:
+    if pessoa['Idade'] >= media:
+        print('---------Pessoas acima da média de idad ')
+        print(f"--Nome {pessoa['Nome']} Idade {pessoa['Idade']}")
+print("FIM")
+
+

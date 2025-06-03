@@ -1,0 +1,12 @@
+# Faça um programa que  peça o salario de um funcionario
+# Calcule o valor do seu aumento
+# Para salarios superiores a R$1.250.00 calcule o aumento de 10%
+# Para inferiores ou igauis é de 15%
+salario = float(input("Qual é seu sálario R$: "))
+if salario >= 1250:
+    aumento = salario + (salario * 10 / 100)
+    print(f"Salario atual R$: {salario:.2f}\nSalario com aumento de 10 % R$: {aumento:.2f} ")
+else:
+    aumentos15 = salario + (salario * 15 / 100 )
+   
+    print(f"Salario atual R$: {salario:.2f}\nSALARIO COM AUMENTO DE 15 % R$: {aumentos15:.2f} ")

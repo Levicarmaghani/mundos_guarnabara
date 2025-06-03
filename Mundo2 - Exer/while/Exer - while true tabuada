@@ -1,0 +1,16 @@
+# faça um programa que mostre a tabuada de varios números
+# Um de cada vez para varios valores digitados pelo usuario 
+# O programa será interrompido quando o número solicitado for negativo 
+tabuada = 0
+while True:
+   
+    numero = int(input("Digite um número para ver sua tabuada: Ou digite (0) para sair "))
+    if numero == 0:
+        break
+    else:
+        for tabuada in range(0, 10):
+            tabuada += 1
+            resultado = numero * tabuada
+            print(f"{numero} X {tabuada} = {resultado}")
+  
+print("Fim do programa")

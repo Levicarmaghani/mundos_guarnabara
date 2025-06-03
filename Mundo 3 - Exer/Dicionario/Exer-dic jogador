@@ -1,0 +1,37 @@
+# Crie um programa que gerancie o aproveitamento de um jogador de futebol .
+# O programa vai ler o nome do jogador e quantas partidas ele jogou 
+# Depoi vai ler quantidade  de gosl feitas em cada partida
+# No final tudo isso será quardada em um dicionario
+# Incluido o total de gols feito durante um campeonato 
+
+while True:
+    # Pedindo dados basico para o usuario
+    dados = dict()
+    dados['nome'] = str(input('Nome do jogador: '))
+    partidas = int(input('Quantas partidas jogadas: '))
+    print('-=' * 30)  
+    break
+# Para cada partida  dentro de total de partidas quantidade de gol
+gol = list()
+for gols in range(0, partidas):
+    gol.append(int(input(f"Quantos gols na {gols + 1}° partida : ")))
+    dados['gols'] = gol[:]
+
+
+print('-=' * 30)  
+
+# 
+for chave, item in dados.items():
+    print(f"--{chave}: {item}--")
+ 
+print('-=' * 30) 
+print(f"O jogador {dados['nome']} jogou {partidas} partidas.")
+print('-=' * 30)  
+
+# Para cada gol de cada partida
+for gol, partida in enumerate(dados['gols']):
+    print(f"     => Na partida {gol + 1}, fez {partida} gols.")
+print('-=' * 30)  
+
+tota_gols = sum(dados['gols'])
+print(f"No total foram {tota_gols} Gols")

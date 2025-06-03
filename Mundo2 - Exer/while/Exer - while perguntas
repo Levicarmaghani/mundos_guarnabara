@@ -1,0 +1,25 @@
+# Crie um programa que leia varios números inteiros 
+# No final do programa mostre a média entre todos os valores 
+# Qual foi o maior e qual foi o menor valores lidos 
+# O programa deve pergunta para o usuario se ele quer ou não continuar a digitar os valores 
+quantidade = 0
+resposta = ''
+soma = 0
+maior = 0
+menor = 0
+while resposta != 'N': # Enquanto minha resposta for não, o laço while continua perguntando
+    numero = int(input("Digite um número: "))
+    soma += numero # soma do número digitado toda vez que o laço passa aqui, ele soma o numero mais o valr atribuido 
+    quantidade += 1 # Toda vez que o laço passa aqui ele soma  mais 1 guardando a quantidade na varivel
+    resposta = str(input("Deseja continuar (S/N)? ")).strip().upper()[0]
+    if quantidade == 1: # Se minha quantidade de número for só 1
+        maior = numero  # o numero digitado passa a ser o maior, pelo fato de não haver mais nemhum outro digitado
+        menor = numero  # o número digitado passa a ser o menor pelo fato de não haver mais nehum outro digitado
+    else: # No caso se não for o primeiro  digitado
+        if numero > maior: # o meu numero digitado for maior que o maior valor atribuido, 
+            maior = numero # meu numero passa a ser o maior, ou o maior recebe número 
+        if numero < menor: # se meu número digitado for menor que o menor valor atribuido
+            menor = numero # meu número passa a ser o menor número, ou meu menor numero recebe número 
+media = soma / quantidade
+print(f"""Voce digitoou {quantidade} números e a média foi de {media:.2f}
+O número maior mostrado foi de {maior} e o menor foi de {menor} """)

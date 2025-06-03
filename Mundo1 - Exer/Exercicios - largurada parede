@@ -1,0 +1,9 @@
+# Faça um programa que leia a largura da parede e altura 
+# Faça o calculo da arear e da qunatidade de tinta que vai precisar para pode pintala 
+# Sabendo que cada litro de tinta pinta uma area de 2m
+
+largura = float(input("Qual é a largura da parede: "))
+altura = float(input(" Qaul é altura da parede: "))
+area = largura * altura
+tinta = area / 2
+print(f" Largura da parede {largura:.2f}\nAltura é de {altura:.2f}\nUso adequado de tinta para essa area será tinta será de {tinta}. ")

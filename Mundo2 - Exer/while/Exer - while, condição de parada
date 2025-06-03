@@ -1,0 +1,14 @@
+# Crie um programa que leia varios números inteiros 
+# O programa so para quando o usuario digita 999 condição de parada
+# No final mostre quantos números foram digitados e qual foi a soma entre eles 
+
+# no while sempre precisaremos da um valor para as variaveis no caso dei 0 que fica armazenado nelas 
+contador = 0
+numero = 0
+soma = 0
+while numero != 999:  # enquanto  o usuario não digita 999 o programa vai continuar 
+    numero = int(input("Digite 999 para para o programa: ")) # lendo números inteiros 
+    if numero != 999: # esse if serve para fazer a soma dos numeros digitados pelo o usuario 
+        soma += numero # enquanto  o laço passa por aqui soma sempre o número do usuario 
+        contador += 1  # contador serve para contar o número  de vezes que o laço conta
+print(f"Voce digitou {contador} números e a soma entre ele foi {soma}")

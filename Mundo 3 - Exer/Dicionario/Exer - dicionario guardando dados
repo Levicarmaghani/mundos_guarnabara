@@ -1,0 +1,21 @@
+# faça um programa que leia nome e media de um aluno 
+# Guardando a situação em um dicionario no final mostre a estrutura de um dicionario na tela 
+dados = dict()
+    
+dados['nome'] = str(input("Nome:"))
+dados['media'] =  float(input(f"Media do aluno {dados['nome']}: "))
+if dados['media'] >= 7:
+    dados['situacao'] = 'Aprovado'
+    
+elif dados['media'] >= 5 :
+    dados['situacao'] = 'Recuperação'
+else:
+    dados['situacao'] = 'Reprovado'
+print('-=' * 30)
+# Para cada chave que é [nome] e o valor [foi o que o usuario forneceu] do meu dicionario dados   
+for chave, valor in dados.items():
+    print(f"   ---{chave} é igual a {valor}")
+
+
+
+

@@ -1,0 +1,46 @@
+# Crie um programa que leia nome e duas notas de varios alunos 
+# E guarde tudo em uma lista composta, 
+# No final mostre um boletin contendo a media 
+# de cada um e permite que o usuario possa mostrar as nota de cada aluno individual
+
+# Craindo a Lista para armazena dados 
+lista = list()
+
+# Laço de repetição para pedi dados do usúario
+while True:
+    nome = input("Nome: ")
+    nota1 = float(input("Nota1: "))
+    nota2 = float(input("Nota2: "))
+    media = (nota1 + nota2) / 2
+
+# Lista para armazena nome e nota 
+    lista.append([nome, [nota1, nota2], media])
+
+# Pedindo para o usúario se ele deseja continuar 
+    continuar = str(input("Deseja continuar (S/N): ")).strip().upper()
+    while continuar not in "NS":
+        print("Digito invalido")
+        continuar = str(input("Deseja continuar (S/N): ")).strip().upper()
+    if continuar == "N":
+        break
+    elif continuar == "S":
+        continue
+    else:
+        print("ERRO")
+
+# Fazendo a lista de nome e notas 
+print("-=" * 30)
+print(f"{"NUM.":<4}{"NOME":>8}{"MEDIA":>10}")
+
+for indece, pessoa in enumerate(lista):
+    print(f"{indece:<4}{pessoa[0]:>8}{pessoa[2]:>10.1f}")
+# Verificando se o usuario deseja ver a nota de algum aluno 
+while True:
+    usuario = int(input("Deseja vernota de qual aluno: (999 INTERROMPE): "))
+    if usuario == 999:
+        print(f"Programa interrompido")
+        break
+    else:
+        if usuario <= len(lista) - 1:
+            print(f"Aluno {lista[usuario][0]} Nota{lista[usuario][1]}")
+print("Fim")

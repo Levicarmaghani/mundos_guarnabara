@@ -1,0 +1,18 @@
+# Faça um jogo que o computador pensa em número
+# Tente adivinha o número que o computador jogou até acerta
+# mostrando no fina quantos palpites foram necessarios para vencer
+from random import randint  # Importanto a biblioteca random, e o randint que gera número aleatorio 
+computador = randint(0, 10)
+usuario = int(input("tente acerta o número aleatorio: "))
+palpite = 1 # Contador do while ta armazenado só um número nele 
+
+while computador != usuario: # Enquanto numero gerado pelo compuatador for diferente do usúario
+    palpite += 1 # Criamos um contador toda vez que o laço se passa aqui vai gera a soma de +1 que sera guardada em palpite 
+    usuario = int(input("Voce errou. Tente novamente:")) # Aqui pedo para o usuario tente novamente porque foi diferente o número
+    if usuario > computador:
+        print('Tente um número menor')
+    else:
+        print('Tente um número maior ')
+    
+print(f'Parabens voce acertou numero do computador: {computador}, número do usuario: {usuario},')
+print(f'Voce tentou {palpite} Vezes')

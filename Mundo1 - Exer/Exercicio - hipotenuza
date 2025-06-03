@@ -1,0 +1,8 @@
+# Faça um programa que leia o comprimento do cateto oposto,
+# Do cateto adjento, e de um triangulo 
+# Calcule e mostre o resultado da hipotenusa 
+from math import hypot
+cateto_oposto = float(input("\033[1;34;34mQual é o tamanho do seu cateto oposto?\033[m "))
+cateto_adjente = float(input("\033[1;32;32mQual é o tamanho do cateto adjente?\033[m "))
+hipotenusa = hypot(cateto_oposto, cateto_adjente )
+print(f"\033[1;31;40mResultado da sua hipotenusa: {hipotenusa:.2f}\033[m ")

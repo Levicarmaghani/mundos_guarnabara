@@ -1,0 +1,34 @@
+# Faça um programa que tenha uma função nota()
+# Pode receber varias nota de alunos
+# Vai retornar um dicionario 
+# Com as seguintes informações 
+
+# - Quantidade de nota 
+# - A Maior nota
+# - A menor nota
+# - A media da turma 
+# - A situação (opcional)
+
+#Adciona o doc string da função 
+
+def notas(*resul, sit=False):
+    
+    nota = dict()
+    nota['maior'] = max(resul)
+    nota['menor'] = min(resul)
+    nota['media'] = sum(resul) / len(resul)
+    if sit:
+        if nota['media'] >= 7:
+            nota['situação'] = 'Boa'
+        elif nota['media'] >= 6:
+            nota['situação'] = 'Razoável'
+        else:
+            nota['situação'] = 'Ruim'
+
+
+        # Fazendo a validação da maior nota e menor nota
+    return nota
+resul = notas(4.5, 3.4, 3.9, 10.0, sit=True)
+print((resul))
+    
+  

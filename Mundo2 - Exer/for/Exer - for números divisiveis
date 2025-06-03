@@ -1,0 +1,11 @@
+# Faça um programa que calcule a soma entre 
+# todos os números impares que são multiplos de tres
+# E que se encontra de 1 até 5000
+
+soma = 0
+
+for num in range (3, 5001):
+    if num % 2 != 0 and num % 3 == 0:
+      soma += num
+print(f"Números impares e são multiplos de 3{soma}")
+ 

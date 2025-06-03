@@ -1,0 +1,25 @@
+"""
+Utilizando o append agente adciona um elemento no final da lista lanche.append(queijo)
+Utilizando o insert eu adciono onde eu quiser o item              lanche.insert(bacom)
+Utilizando o remov e escrevendo o nome do item voce consegue remover o item  lanche.remov(pizza)
+ Index procura a posição do item 
+ 
+ """
+"""num = [2,5,9,1,]
+
+num.append(7)
+num.sort(reverse=True)
+num.insert(1 , 3)
+
+print(num)
+print(f" minha lista tem {len(num)} elementos")"""
+"""valores = []
+valores.append(2)
+valores.append(6)
+valores.append(4)"""
+# O c virou uma variavel de cada posição o v significa o valor daquela posição
+#for c, v in enumerate(valores):# o enumarate faz percorre a posição da lista 
+#   print(f"Na posição {c} encontrei o valorer {v}")
+valor = list()
+for contador in range(0, 5):
+    valor.append(int(input("Digite um valor: ")))

@@ -1,0 +1,8 @@
+# Crie um programa que lei um número inteiro e mostre na tela se ele é PAR ou IMPAR
+
+numero = int(input("Digite um número e veja se ele é par ou impar: "))
+resto = numero % 2
+if resto == 0:
+    print(f" O número {numero} é par")
+else:
+    print(f" O número {impar} é impar")

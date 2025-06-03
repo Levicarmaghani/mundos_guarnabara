@@ -1,0 +1,70 @@
+# Aprimorando o desafio 
+# Crie um programa que gerancie o aproveitamento de um jogador de futebol.
+# O programa vai ler o nome do jogador e quantas partidas ele jogou 
+# Depoi vai ler quantidade  de gols feitas em cada partida
+# No final tudo isso será quardada em um dicionario
+# Incluido o total de gols feito durante um campeonato 
+
+# Minha lista e dicionario 
+jogador = dict()
+partidads = list()
+
+#  Adicionando dicionario a lista de time
+time = list()
+
+while True:
+    # Zerando meu dicionario para armazena novos dados do usuario 
+    jogador.clear()
+
+    # Pedindo dados do usuario 
+    nome = str(input('Nome: '))
+    partidas = int(input(f" {nome} quantas partidas voce jogou: "))
+
+    gols_por_partidas = list()
+    # Para cada partida
+    for contador in range(partidas):
+        gols = int(input(f" Quantos gols na {contador + 1}° partida: "))
+        gols_por_partidas.append(gols)
+        total_gols = sum(gols_por_partidas) 
+      
+    # Armazenando dados em um dicionario
+    jogador = {
+        'nome': nome,
+        'partidas': partidas,
+        'gols': gols_por_partidas,
+        'total gols': total_gols
+    }
+    
+
+    # Armazenando jogadores do dicionario a lista  de time 
+    time.append(jogador.copy())
+    continuar = str(input("Deseja continuar (S/N): ")).strip().upper()[0]
+    while continuar not in "SN":
+        print("--DIGITO INVALIDO--TENTE NOVAMENTE-- ")
+        continuar = str(input("Deseja continuar (S/N): ")).strip().upper()[0]
+    if continuar == "N":
+         break
+    elif continuar == "S":
+         continue
+# Para cada inde que está vazio por causa do jogador clear.   
+
+
+
+# Exibindo os dados formatados
+# Estamos alinhando nosso titulo 
+print("\n{:<4} {:<15} {:<10} {:<20} {:<10}".format("ID", "Nome", "Partidas", "Gols por partida", "total de Gols"))
+print("-" * 60)
+# para cada indece e jogador da ,minha lista de time 
+for i, jogador in enumerate(time):
+    print(f"{i + 1:<4} {jogador['nome']:<15} {jogador['partidas']:<10} {str(jogador['gols']):<20} {jogador['total gols']:<10}")
+while True:
+    usuario = int(input("Mostrar dados de qual jogador : (999 intompe) "))
+    if usuario == 999:
+        break
+    if usuario >= len(time):
+        print("Erro esse número não tem na lista ")
+    else:
+        print(f"----Levamtamento do um jogador {time[usuario]['nome']}")
+        for indece, gol in enumerate(time[usuario]['gols']):
+            print(f"    No jogo {indece + 1} fez {gol} gols  ")
+        

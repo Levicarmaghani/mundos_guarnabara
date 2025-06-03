@@ -1,0 +1,24 @@
+# Faça um programa que tenha um função chamada maior(), que receba vários parametros com valores inteiros. Seu programa tem que analisar todos os valores e dizer qual deles é o maior 
+# 
+# função
+def maior (* núm):
+    contador = 0
+    maior = 0
+    print()
+    print("Analisando os valores")
+    for valor in núm:
+        print(f" {valor}", end=' ')
+        if contador == 0:
+            maior = valor 
+        else:
+            if valor > valor:
+                maior = valor 
+        contador += 1
+    print(f" foram informados o total de {contador} valores", end='')
+    print(f" o maior valor informado foi o {valor}")
+
+
+maior(2, 6, 4, 7, 8 )
+maior(4, 7, 8)
+maior(1, 2)
+maior(0,)

@@ -1,0 +1,9 @@
+#Desemvolva um programa para calcula a nota de um aluno
+
+nt1 = float(input("\033[1;34;40mDigite sua primeira nota: \033[m"))
+nt2 = float(input("\033[1;34;40mDigite sua segunda nota: \033[m"))
+
+media = (nt1 + nt2) / 2 
+print(f"""\033[1;34;40mPrimeira nota: \033[1;31;40m{nt1}
+\n\033[1;34;40mSegunda nota: \033[1;31;40m{nt2}
+\n\033[1;34;40mMédia do ano: \033[1;31;40m{media}..\033[m]""")

@@ -1,0 +1,26 @@
+# Deselvolva um programa que leia 4 valores 
+# Guarda os valores em uma tupla no final mostre
+# Quantas vezes apareceu o valor 9
+# Em que pocição foi digitado o valor 3
+# Quais foram os valores pares
+num1 = (int(input("Digite o primeiro valor: ")),
+    int(input("Digite o segundo valor: ")),
+    int(input("Digite o terceiro valor: ")),
+    int(input("Digite o quarto valor: ")))
+print("-=" * 30)
+print(f"O número 9 apareceu {num1.count(9)}X")
+print("-=" * 30)
+if 3 in num1: # Se o número 3 estiver dentro da tupla
+    print(f"O número 3 se encontra na posição {num1.index(3)+1}")
+    print("-=" * 30)  
+else: # Se não
+    print("Não tem o  número 3")
+    print("-=" * 30)
+for num in num1: # para u o numero par da miniha tupla 
+    if num % 2 == 0: # Se o resto da divisão for 0 o número é par
+        print(f" valor par {num}", end = " ")
+        print("-=" * 30)
+
+
+
+

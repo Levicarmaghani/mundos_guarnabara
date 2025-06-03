@@ -1,0 +1,26 @@
+# Escreva um programa  para aprovar o emprestimo bancario para comprar uma casa
+# O programa vai perguntar o valor da casa
+# O salario do comprador e em quantos anos ele quer pagar
+# Calcule o valor da prestação mensal sabendo que ele não pode exeder 30 por cento do salario
+# se o emprestimo sera negado 
+
+
+valor_casa = float(input("Qual é o valor da casa R$  "))
+
+salario_comprador = float(input("Quanto é sua renda mensal R$  "))
+
+quantidade_vezes_a_pagar = int(input("Quantas vezes voce quer parcelar? "))
+prestacao = valor_casa / (quantidade_vezes_a_pagar * 12) 
+minimo = (salario_comprador * 30) / 100
+print(f"""O valor da casa é R$ {valor_casa}\nVoce quer financiar em R${quantidade_vezes_a_pagar}
+Sua prestação sera de R${prestacao:.2f}""")
+
+if prestacao <= minimo:
+    print("Valor aprovado")
+else:
+    print("Valor Reprovado")
+
+
+
+
+

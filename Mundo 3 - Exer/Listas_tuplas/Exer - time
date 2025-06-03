@@ -1,0 +1,26 @@
+# Crie uma tupla preenchida com os 20 primeiros colocados da tabela
+# Campeonato brasilerio de futbol na ordem de colocão depois mostre:
+# A) Apenas os 5 primeiro colocados 
+# B) Os ultimos 4 colocados da tabela
+# C) Uma lista com os times em ordem alfabeticas 
+# D) Em que posição na tabela está o time chapecoence 
+lista = ["Palmeiras","Flamengo","Internacional","Grêmio", "São Paulo Atlético-MG", "Athletico-PR", "Cruzeiro",
+"Cruzeiro", "Botafogo", "Santos", "Bahia", "Fluminense", "Corinthians", "Chapecoense", "Vasco", "América-MG","Sport"
+"Vitória", "Paraná"
+]
+primeiros5 = lista[:5]
+ultimos4 = lista[-4:]
+listaordem = tuple(sorted(lista))
+posiçao = lista.index("Chapecoense")+1
+print(f"""
+Os cinco primeiros colocados são {primeiros5}
+Os ultimos 4 colocados do brasileirão {ultimos4}
+Lista em ordem alfabetica {listaordem}
+O time chapecoence esta na posição {posiçao}
+""")
+
+
+
+
+
+

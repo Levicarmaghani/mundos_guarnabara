@@ -1,0 +1,87 @@
+# Crie uma calcladora usando função
+# Crie tambem a opção de tabuada 
+# Pergunta a o usuario se ele deseja continuar ou parar
+
+# Criando função
+def soma (a, b):
+    somar = a + b
+    return somar
+def subtracao (a, b):
+    subtrai = a - b
+    return subtrai
+def multiplicacao (a, b):
+    multiblicar = a * b
+    return multiblicar
+def divisao (a, b):
+    dividir = a / b
+    return dividir
+# Função de valores
+def valores ():
+    valor1 = int(input("Digite o primeiro valor: "))
+    valor2 = int(input("Digite o segundo valor: "))
+    return valor1, valor2
+
+# |Função de tabuada
+def tabuada():
+    valor1 = int(input("Digite o  valor para ver sua tabuada: "))
+    contador = 0
+    for contador in range(0, 11):
+         resultado = valor1 * contador
+         print(f"{valor1} X {contador} = {resultado}")
+    return resultado
+
+# Laço de repetição
+while True:
+    print("-=" * 30)
+    usuario = int(input("""
+Voce deseja [1]SOMAR, [2]SUBTRAIR, [3]MULTIPLICAR, [4]DIVIDIR ou ver a [5]TABUADA: 
+"""))
+    
+    # Enqunato os valores 1,2,3,4,5 não forem digitado o laço se repete
+    while usuario not in [1,2,3,4,5]:
+        print("-=" * 30)
+        print("OPÇAO INVALIDA, TENTE NOVAMENTE")
+        print("ESCOLHA ALGUMA OPÇÃO DA TELA")
+        usuario = int(input("Voce deseja [1]SOMAR, [2]SUBTRAIR, [3]MULTIPLICAR, [4]DIVIDIR ou ver a [5]TABUADA:"))
+        print("-=" * 30)
+
+    # Definindo cada valor 
+    if usuario == 1:
+        valor1, valor2 = valores()
+        resultado = soma(valor1, valor2)
+        print(f"Resultado de {valor1} + {valor2} = {resultado}")
+
+    elif usuario == 2:
+        valor1, valor2 = valores()
+        resultado = subtracao(valor1,valor2)
+        print(f"Resultado de {valor1} - {valor2} = {resultado}")
+    
+    elif usuario == 3:
+        valor1, valor2 = valores()
+        resultado = multiplicacao(valor1,valor2)
+        print(f"Resultado de {valor1} * {valor2} = {resultado}")
+
+    elif usuario == 4:
+        valor1, valor2 = valores()
+        resultado = divisao(valor1,valor2)
+        print(f"Resultado de {valor1} / {valor2} = {resultado}")
+    
+    elif usuario == 5:
+        tabuada()
+
+    # Pegunta se o usúario deseja continuar  
+    continuar = str(input("Deseja continuar (S/N): ")).strip().upper()
+    while continuar not in "SN":
+        print("DIGITO INVALIDO TENTE NOVAMENTE")
+        continuar = str(input("Deseja continuar (S/N): ")).strip().upper()
+    if continuar == "N":
+        break
+    else:
+        continue
+print("-=" * 30)
+print("FIM DO PROGRAMA.")
+print("-=" * 30)
+        
+            
+  
+

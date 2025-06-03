@@ -1,0 +1,29 @@
+# Faça que leia 5 valores numericos e guarda em uma lista
+# No final mostre qual foi o maior e o menor valor digitados e suas respectivas 
+# Posição na lista 
+lista = [] # Criando uma lista pra armazena dado do usuario
+maior = 0 # Maior sem valor 
+menor = 0 # menor sem valor 
+for contador in range(0, 5): # para cada numerio  vai de 0 ao 5
+    # para criar uma lista que guarda dado do usuario, usemos uma lista composta que guarda varios valores 
+    # append adiciona o elemento ou dado na ultima posição
+    lista.append(int(input(f"Digite um valor para a posição {contador}: ")))
+
+    if contador == 0:
+        maior = lista[contador]
+        menor = lista[contador]
+    else:
+        if lista[contador] > maior:
+            maior = lista[contador]
+        if lista[contador] < menor:
+            menor = lista[contador]
+print(f"Voce digitou os valores {lista}")
+print(f"O maior item da lista {maior} ")
+for indece , valor in enumerate(lista):
+    if valor == maior:
+        print(f" Suas posições{indece}")
+
+print(f"O menor item da lista {menor}")
+for indec , valo in enumerate(lista):
+    if valo == menor:
+        print(f"Suas posições {indec}")

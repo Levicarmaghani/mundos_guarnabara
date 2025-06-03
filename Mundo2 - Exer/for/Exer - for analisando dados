@@ -1,0 +1,43 @@
+# Desenvolva um programa que leia o Nome, Idade e Sexo de 4 pessoas
+# No final do programa mostre a media do gupo 
+# Qual é idade do homen mais velho
+# Quanta mulheres tem menos de 20 anos 
+
+# Inicializando variáveis
+soma_idade = 0
+maior_idade_homem = 0
+home_velho = ''
+totalmulheres = 0
+
+# Laço for para pedir as informações das 4 Pessoas
+for pess in range(1, 5):
+    print(f"---------- {pess}ª Pessoa ----------")
+    nome = str(input("Digite seu nome: ")).strip()
+    idade = int(input("Digite sua idade: "))
+    sexo = str(input("Sexo [M/F]: ")).strip().upper()
+
+    # Somando as idades para calcular a média depois
+    soma_idade += idade # Soma idade foi usado para somar as idades e calcular as média
+    media_idade = soma_idade / 4 # para obeter idade media soma de todas idades dividido por 4
+
+    # Encontrando o homem mais velho
+    if pess == 1 and sexo in 'Mm':  # Se a pessoa for a primeira pessoa e o sexo for masculino
+        maior_idade_homem = idade # maior idade recebe idade 
+        home_velho = nome         # e home homen mais velho recebe nome
+    if sexo == 'Mm' and idade > maior_idade_homem: 
+        maior_idade_homem = idade # a idade passa receber a maior idade
+        home_velho = nome  # o nome passa a ser do nhomen mais velho 
+
+
+    # Contando o número de mulheres com menos de 20 anos
+    if sexo == 'F' and idade < 20:
+        totalmulheres += 1
+
+
+
+print(f"A média de idade do grupo é de {media_idade:.1f} anos.")
+
+print(f"O homem mais velho tem {maior_idade_homem} anos e se chama {home_velho}.")
+
+
+print(f"Total de mulheres com menos de 20 anos: {totalmulheres}.")

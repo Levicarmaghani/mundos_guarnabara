@@ -1,0 +1,7 @@
+# Faça um program que leia o sexo de uma de pessoa
+# Ma só aceita os valores M ou F caso esteja erraddo peça de novo
+#  até o valor estae certo
+sexo =  str(input("Digite Seu sexo (M/F)")).strip().upper()[0]
+while sexo not in "MnFf": # Enquanto a pessoa não digita o valor (MmFf) o laço wilhe contnua 
+    sexo = str(input("Digito invalido, tente novamente. Digite seu sexo: ")).strip().upper()[0]
+print(f"Seu sexo {sexo} cadrastado com sucesso")

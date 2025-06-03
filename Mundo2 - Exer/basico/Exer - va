@@ -1,0 +1,11 @@
+# Crie uma tabuada com for ou while
+def multiplicador (a, b):
+    multiplicacao = a * b
+    return multiplicacao
+
+tabuada = 0 
+numero = int(input("Digite um número para ver sua tabuada: "))
+while tabuada < 10:
+    tabuada += 1
+    resultado = multiplicador(numero)
+    print(f"{numero} X {tabuada} = {resultado}")

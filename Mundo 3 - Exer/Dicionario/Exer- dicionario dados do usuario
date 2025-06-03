@@ -1,0 +1,31 @@
+# Crie um programa que leia nome, ano de nascimento e carteira de trabalho e cadastre-os icom idade) em um dicionario se por acaso o ctps for diferente de zero, o dicionario recebera tambem o ano de contratação e o salario. calcule e acrecente, alem da idade com quantos anos a pessoa vai se aposentar, aposentatoria depois de 35 anos    
+
+from datetime import date
+while True:
+    # Pedindo dados do usuario 
+    dados = dict()
+    dados['Nome:'] = str(input("Nome: "))
+    ano_nascimento = int(input("Ano de Nascimento: "))
+    dados['idade'] = date.today().year - ano_nascimento
+    dados['Carteira de Trabalho'] = int(input("Carteira de Tabalho (0 / Se não possui): "))
+
+    # Se o usuario possuir carteira de trabalho
+    if dados['Carteira de Trabalho'] != 0:
+        dados['Ano de Contratação'] = int(input("Ano de contratação: "))
+        dados['Salario'] = float(input("Salário: "))
+    else:
+        dados['Ano de Contratação'] = 0
+    
+    # Calculo da aposentadoria
+    if dados['Carteira de Trabalho'] != 0:
+        ano_atual = date.today().year
+        ano_contribuicao =  ano_atual - ano_nascimento
+        ano_aposentadoria = dados['Ano de Contratação'] + 35
+        dados['aposentadoria'] = dados['idade'] + (ano_aposentadoria - ano_atual)
+    else:
+        print(f"A pessoa não possui carteira de trabalho ")
+    break
+print()
+# Para cada chave do meu dicionario, com o valor dos dados do usuario que estão em um dicionario
+for chave, valor in dados.items():
+    print(f"   --{chave} tem o valor {valor}")

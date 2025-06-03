@@ -1,0 +1,8 @@
+# Crie um algoritimo que mostre seu dobro seu triplo e sua raiz quadrada
+numero_usuario = int(input("\033[4;34;40mDigite um número para ver seu dobro, triplo e raiz quadrada:\033[m "))
+
+dobro = numero_usuario * 2 
+triplo = numero_usuario * 3
+raiz = numero_usuario ** (1/2)
+
+print(f"\033[4;35;40mSeu número foi o N°{numero_usuario}\n\033[4;31;40mDobro dele é N°{dobro}\n\033[4;32;40mTriplo será N°{triplo}\n\033[4;33;40mSua raiz N°{raiz:.2f}\033[m ")

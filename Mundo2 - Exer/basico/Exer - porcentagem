@@ -1,0 +1,50 @@
+# Elabore um programa que calcule o valor a ser pago por um produto 
+# Considerando seu preço normal e condiçoes de pagamento:
+# - A vista dinheriro cheque: 10 % de desconto
+# - A vista no cartão: 5% de desconto 
+# - Em até 20 X no cartão preço normal 
+# - 30 x ou mais no cartão 20 % de juros 
+
+produto = float(input("Valor do seu produto R$ "))
+
+print(f"-="*20)
+print(f"""\033[2;34;40mVeja as opção para efetuar o pagamento
+[1]  A vista dinheriro, cheque: 10 por cento de desconto
+[2]  A vista no cartão cinco por cento de desconto
+[3]  Até 2 x vezes no cartão preço normal
+[4]  3 X ou mais no cartão 20 por cento de juros 
+\033[m""")
+opcao = int(input("Escolha a opcão acima: "))
+
+if opcao == 1:
+    total = produto - (produto * 10 / 100)
+    print(f"Com desconto de 10% ")
+       
+elif opcao == 2:
+    total = produto - (produto * 5 / 100)
+    print(f"Com desconto de 5% ")
+
+elif opcao == 3:
+     total = produto
+     print(""" Em quantas Vezes
+[1]
+[2]""")
+     total_parcela = int(input("Escolha a opcao acima: "))
+     if total_parcela == 1 or 2
+         print(f"Sua compra saio sem juros no valor de R$ {produto:.2f}")
+
+elif opcao == 4:
+   total = produto + (produto * 20 / 100)
+   total_parcela = int(input("Quantas parcelas? "))
+   print(f"""Valor total do seu produto R$ {produto:.2f}
+Parcelada em {total_parcela}X com 20% de juros vai fica {total:.2f}""")
+else:
+    total = 0 
+    print("Erro tente novamente")
+
+print(f"Sua compra no valor R$ {produto:.2f} vai custar {total:.2f}")
+
+      
+
+
+    

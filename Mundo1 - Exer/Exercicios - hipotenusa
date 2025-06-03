@@ -1,0 +1,13 @@
+# faça um programa que leia o comprimento do cateto oposto 
+# Do cateto adjacento
+# calcule e mostre o comprimento da ipotenusa.
+
+import math
+cateto_oposto = float(input("digite o cateto oposto: "))
+cateto_adjacento = float(input("digite cateto adjacento: "))
+hipotenusa = math.hypot(cateto_oposto, cateto_adjacento)
+
+print(f"hipotenuza: {hipotenusa}")
+
+
+

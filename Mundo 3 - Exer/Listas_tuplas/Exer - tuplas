@@ -1,0 +1,29 @@
+# Crie um programa que tenha uma tupla totalmente
+# Prenchida com uma contagem por extenso de 0 até 20
+# Seu programa devera ler um número pelo teclado (entre 0 e 20) e mostrar por extenso 
+from num2words import num2words
+
+cont = ('Zero', 'Um', 'Dois', 'Tres', 'Quatro', 'Cinco', 'Seis', 'Sete', 'oito', 'Nove', 'Dez',
+'Onze', 'Doze', 'Treze', 'Quatorze', 'Quinze', 'Dezesseis', 'Dezessete', 'Dezoito', 'Dezenove', 'Vinte',)
+
+
+while True:
+    numero = int(input("Digite um númnero entre 0 e 20: "))
+    if numero < 0 or numero >= 20:
+        numero = int(input(" Tente novamente: Digite um númnero entre 0 e 20: "))
+    else:
+        print(f"Seu número é o {cont[numero]}")
+   
+    continuar = str(input('Deseja continuar (S/N): ')).strip().lower()
+    if continuar == 's':
+         continue
+    if continuar == 'n':
+         break
+    while continuar not in 'sn':
+            print("Digito invalido")
+            continuar = str(input('Deseja continuar (S/N): ')).strip().lower()
+    if continuar == 'n':
+         break
+
+       
+            

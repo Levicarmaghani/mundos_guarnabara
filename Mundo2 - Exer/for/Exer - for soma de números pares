@@ -1,0 +1,17 @@
+# Desenvolva um programa que leia seis números inteiros e mostre a soma 
+# Apenas daquelas que foram pares, Se o valor digitado for impar desconsidera-o
+
+
+print("Digite 6 números inteiros para ver a soma")
+soma_pares = 0
+for num in range(0, 6):
+    num1 = int(input("Digite os número: "))
+
+    if num1 % 2 == 0:
+        soma_pares += num1
+else:
+    print("Valor impar é desconsiderado")
+print(soma_pares)
+
+
+    

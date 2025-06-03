@@ -1,0 +1,20 @@
+# Faça um program que leia o ano de nascimento de um jovem 
+# Informe de acordo com sua idade
+# Se ele ainda vai se alista esse ano ao serviço militar
+# Se hora de se alistar 
+# Se ja passo do tempo de alistamento 
+# Mostra o tempo que falta ou que passou do prazo 
+print(f"\033[1;34;40mVeja quanto tempo falta pra voce se alistar?\nSe já passou ou não do prazo!\033[m")
+
+idade = int(input("\033[4;31;40mQual é sua idade :\033[m "))
+
+if idade == 18:
+    print(f"\033[1;34;40mVoce precisa fazer o alistamento militar esse ano.\033[m ")
+
+elif idade > 18:
+     tempo_passou = (idade - 18)
+     print(f"\033[1;34;40mJá passou a data de fazer o alistamento militar a {tempo_passou} anos.\033[m ")
+else:
+     menor_idade = (18 - idade)
+     print(f"\033[1;34;40mVoce ainda é de menor falta {menor_idade} anos pra voce se alistar\033[m")
+

@@ -1,0 +1,54 @@
+# crie um programa que leia dois valores
+# Mostra um menu 
+# Seu programa devera realizar operação solicidade em cada caso
+# minhas  função
+def soma (a, b):
+  soma = a + b
+  return soma 
+def multiplicador (a, b):
+  multiplicador = a * b
+  return multiplicador
+
+import time
+print('-' * 30)
+opcao = 0
+valor1 = int(input('Digite o primeiro valor: '))
+valor2 = int(input('Digite o segundo valor: '))
+time.sleep(1)
+print('-' * 30)
+while opcao != '5': # O laço vai continua até que o usuario digita a opção 5
+      print('''
+      [1] Somar
+      [2] Multiplicar
+      [3] Maior
+      [4] Novos números
+      [5] Sair do programa
+      ''')
+      opcao = int(input("Qual é sua opção: ")) # Menu de exibição esse menu sempre vai aparecer até o usuario digita o valor para sair 
+      time.sleep(1)
+      # opção serve para somar os valores 
+      if opcao == 1:
+        print(f"{valor1} + {valor2} = {soma(valor1, valor2)}")
+        # opçãp serve para multiplicar os valores 
+      elif opcao == 2:
+        print(f"{valor1} . {valor2} = {multiplicador(valor1, valor2)}") 
+        # Essa opção determina o usuario digita uma os valore novamente so que maiores 
+      elif opcao == 3:
+        print(f"Digite um valor maior")
+        valor1 = int(input('Digite o primeiro valor: '))
+        valor2 = int(input('Digite o segundo valor: '))
+        # Essa opção determina novos valores para o usuario
+      elif opcao == 4:
+        print(f"Digite seus novas valores.") 
+        valor1 = int(input('Digite o primeiro valor: '))
+        valor2 = int(input('Digite o segundo valor: '))
+        # Essa opção caso ele digita o valor 5 que vais finilizar o programa
+      elif opcao == 5:
+        print('Até mais')
+        # Essa opção se o usuario digita qualquer opçao diferente do menu 
+      else:
+        print("Opção invalida.")
+      time.sleep(2)
+print('Muito obrigado por participar do nosso programa')
+
+

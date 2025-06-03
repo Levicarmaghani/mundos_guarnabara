@@ -1,0 +1,7 @@
+# Crie um programa que leia um número real
+# Mostre na tela sua porção imteira
+from math import trunc
+numero = float(input("digite um número: "))
+inteiro = trunc(numero)
+print(f"Numero digitado pelo usuario: {numero}\nNúmero inteiro: {inteiro}")
+

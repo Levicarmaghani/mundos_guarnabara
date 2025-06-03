@@ -1,0 +1,31 @@
+# Crie um programa que tenha uma função chamada votal()
+# Vai receber como parametro o ano de nascimento de uma pessoa.
+# retornando um valor literal indicando se uma pessoa tem VOTO NEGADO, OPCIONAL OU OBRIGATORIO nas eleições
+
+# Importando meu datime, date  mostra a data atual 
+from datetime import date
+
+# Função votal
+def votal():
+    """
+    Essa função pega o nascimento do usuario 
+    Mostra na tela a idade de e se a votação é obrigatoria   
+    """
+    print("-=" * 25)
+    nascimento =  int(input("Nascimento: "))
+    ano_atual = date.today().year
+    idade = nascimento - ano_atual
+    
+    if idade > 16:
+        print(f"Votação opcional")
+   
+    elif idade > 18 or idade < 70:
+        print(f"Votação obrigatoria")
+    
+    elif idade > 70:
+        print(f"Opcional Votação")
+    print("-=" * 25)
+    return idade
+
+print(f"idade{votal()}")
+help(votal)

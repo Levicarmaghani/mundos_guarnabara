@@ -1,0 +1,23 @@
+# Desenvolva um programa que leia o preimeiro termo
+# A razão de uma PA. 
+# No final, mostre os 10 primeios termos dessa progressão
+print("GERADOR DE PA")
+print('-=' * 20)
+primeiro_termo = int(input("Primeiro termo: "))
+razao = int(input("Qual é a Razão: "))
+contador = 1  # Contador pra fazer a contagem esse 1 fica armazendo nele 
+termo = primeiro_termo
+# Explicação enquanto for menor que o número 10 o while vai roda o programa, ou ele vai fazer a repitiçãom 10 vezes
+# nosso termo += razao,termo+ razão EX termo 2,  razao 2, 2 + 2 = 4 esse 4 vai ser armazenado na variavel termo
+# quando laço se repiter vai esta o 4 armazenado no termo ele vai fazer mais 2 que era razao, vai fica = 6
+# mais uma repitição do laço 6 + 2 = 8
+while contador < 10:
+    termo += razao 
+    contador += 1 
+    print(f"{termo} > ", end= " ")
+   
+
+    
+
+
+    

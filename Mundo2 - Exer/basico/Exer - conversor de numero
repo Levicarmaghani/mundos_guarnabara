@@ -1,0 +1,26 @@
+# Escreva um programa que leia um numero inteiro qualquer 
+# Peça ao usuarrio para escolher qual sera a base de conversão
+# -1 binario 
+# -2  octal
+# -3 hexadecimal
+numero = int(input("Digite um número inteiro : "))
+print(f"""
+[1] Converter para BINARIO
+[2] Converter para OCTAL
+[3] Converter para HEXADECIMAL
+""") 
+opcao = int(input("Escolha um opção acima: "))
+if opcao == 1:
+    binario = bin(numero)
+    print(f" Seu número {numero} convertido para binario {binario}")
+
+if opcao == 2:
+    octal = oct(numero)
+    print(f"Seu número {numero} convertido para octal {octal}")
+
+elif opcao == 3:
+    hexedecimal = hex(numero)
+    print(f" Seu número {numero} convertido para hexedecimal {hexedecimal}")
+
+else:
+    print(f"Opção inavalida tente novamente")

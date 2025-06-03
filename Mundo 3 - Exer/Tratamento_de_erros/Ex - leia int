@@ -1,0 +1,36 @@
+# Reescreva a função leia int () que fizemos no desafio
+# Inclua a possibilidade de digiatação de número de tipo inválido. 
+# aproveite tambem e crie uma função leia float com a mesma funcionalidade 
+
+def leiaint(mensagem):
+    while True:
+        try:
+            usuario_int = int(input(mensagem)).strip()
+        except (ValueError, TypeError):
+            print('\033[0;31mErro de digitação, digite um valor inteiro \33[m ')
+            continue
+        except (KeyboardInterrupt):
+            print('\33[0;31mO usúario preferiu não informar esse valor\033[m')
+            return 0
+        else:
+            return usuario_int
+         
+def leiafloat(mensage):
+    while True:
+        try:
+            usuario_float = float(input(mensage)).strip()
+        except (ValueError, TypeError):
+            print('\033[0;31mErro de digitação, digite um valor flutuante \33[m ')
+            continue
+        except (KeyboardInterrupt):
+            print('\033[0;31mO usuário preferiu não digitar o valor\33[m ')
+            return 0
+        else:
+            return usuario_float
+       
+         
+       
+
+int = leiaint('Digite um valor inteiro: ')
+float = leiafloat('Digite um valor flutuante: ')
+print(f'o valor inteiro digitado foi de {int} e o valor real foi de {float}')

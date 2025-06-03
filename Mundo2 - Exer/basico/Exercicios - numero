@@ -1,0 +1,15 @@
+# Escreva um programa que faça o computador pensar em um número inteiro entre 0 e 5 
+# Peça para o usúario tentar descobri qual foi o número pelo computador
+# faça computador  escrever na tela se o usuario acertou
+from random import randint
+from time import sleep
+print(f"Olá tente adivinha o mesmo número que eu de 0, 5")
+print('-=-' * 20)
+numero_usuario = int(input("Qual é seu número: "))
+print('Processando')
+sleep (3)
+computador = randint (0, 5)
+if computador == numero_usuario:
+    print(f"Voce acertou! Seu número é: {numero_usuario}Numero que eu pensei: {computador}\nPARABENS!!!!!!!!!!!!!")
+else:
+    print("Poxa voce errou!\nSeu número era: {}\nMeu numero era: {}".format(numero_usuario, computador))

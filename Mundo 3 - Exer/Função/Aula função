@@ -1,0 +1,14 @@
+# Aprendendo a otimizar função 
+# Meu def recebe titulo com txt
+# Como eu print txt toda vez que eu chama o titulo posso coloca o nome que eu quiser
+def titulo(txt):
+    print("-=" * 30)
+    print(txt)
+    print("-=" * 30)
+
+
+
+titulo('     levi     ')
+
+# Num serve para desempacotar EX: ele ta falando pra usuario que pode colocar quantos numeros ele quiser 
+def contador(*num)

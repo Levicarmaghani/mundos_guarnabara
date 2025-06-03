@@ -1,0 +1,25 @@
+# Faça um program que leia o ano de nascimento de um jovem 
+# Informe de acordo com sua idade
+# Se ele ainda vai se alista esse ano ao serviço militar
+# Se hora de se alistar 
+# Se ja passo do tempo de alistamento 
+# Mostra o tempo que falta ou que passou do prazo 
+from datetime import date
+atual = date.today().year
+nascimento = int(input("Em que ano voce nasceu? "))
+idade = atual - nascimento
+print(f"Quem nasceu em {nascimento} tem idade de {idade} anos")
+if idade == 18:
+    print(f"Quen tem {idade} anos deve se alistar imediatamente")
+
+elif idade < 18:
+    print(f"Sua idade é de {idade} não precisa se alistar")
+    saldo = idade - 18
+    ano = saldo + atual
+    print(f"Seu ano de alistamento será em {ano} ")
+else:
+    saldo1 = idade - 18
+    ano1 = atual - saldo1
+    print(f"Sua idade é de {idade} anos voce já passou do prazo de alistamento\nDeveria ter se alistado em {ano1}")
+        
+

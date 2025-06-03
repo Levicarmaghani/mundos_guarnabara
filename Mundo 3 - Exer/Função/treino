@@ -1,0 +1,39 @@
+# Faça um programa que tenha um função chamada maior(), que receba vários parametros com valores inteiros. Seu programa tem que analisar todos os valores e dizer qual deles é o maior 
+
+# função
+def escreva(txt):
+    # A função len retorna o número de caracteres do texto somando mais 4 caracteres ele adicona 2 caracteres de cada lado do texto
+    tamanho = len(txt) + 4
+    # Esse print retorna o total de caracteres do texo + 4
+    print("-" * tamanho)
+    
+    print(f"  {txt}  ")
+    print("-" * tamanho)
+
+
+
+
+def maior (* núm):
+    contador = 0
+    maior = 0
+    menor = 0
+   
+    escreva("-=" * 30)
+    escreva("Analisando valores")
+    for valor in núm:
+        print(f"{valor}", end=' ')
+        if valor == 0:
+            maior = valor
+          
+        else:
+            if valor > maior:
+                maior = valor
+            
+        contador += 1
+        
+    print(f"Foram escrito {contador} valores inteiros, ")
+    print(f" o maior valor foi o ({maior})")
+   
+
+maior(5, 47, 36, 45, 70)
+maior(4, 2, 15 ,48, 78, 96, 32) 

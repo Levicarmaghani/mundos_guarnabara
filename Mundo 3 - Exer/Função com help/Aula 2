@@ -1,0 +1,52 @@
+# docstring
+"""
+def contador (i, f, p):
+
+    para i = inicio da contagem 
+    para f = fim da contagem
+    para p = pulando de tanto em tanto 
+    sem retorno 
+    Função criada pelo guarnabara
+    
+    contador = i
+    while contador <= f:
+        print(f"{contador} ", end = ' ')
+        contador += p
+    print('Fim')
+
+
+help(contador)
+
+# Outro exemplo 
+def contador (a=0, b=0, c=0): # Aqui a e b e c são parametros opcionais 
+    
+    soma a + b + c
+    os parametros são opçnoais então não gera erro 
+    
+    
+    soma = a + b + c
+    print(soma)
+    print("fim")
+
+
+help(contador)"""
+
+# Variavel global e local ex
+"""def teste():
+    x = 8 # a uma varial x é local 
+    print(f"Na função teste n vale {n}")
+    print(f"Na função teste x vale {x}")
+
+n = 2 # o n é uma variavel global 
+print(f"No programa principal n vale {n}")
+teste()
+print(f"No programa princinpal, x vale ")"""  
+
+"""def fatorial(num=0):
+    fator = 1
+    for contador in range(num,  0, - 1):
+        fator *= contador
+    return fator
+    
+usuario = int(input("Digite um número "))
+print(f"O fatorial de {usuario} é {fatorial(usuario)}")"""

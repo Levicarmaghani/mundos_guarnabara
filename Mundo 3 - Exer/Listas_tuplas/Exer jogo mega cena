@@ -1,0 +1,38 @@
+# Faça um programa que ajude o jogador da Mega Cena com palpites 
+# O programa vai perguntar quantos jogos serão gerados, vai sortear 6 números entre 1 e 60 para cada jogo,cadastrando tudo em uma lista composta
+
+# Importando Bibliotecas
+from random import randint
+from time import sleep 
+
+# Criando minhas lista
+lista = [] 
+listacompleta = []
+
+# tela
+print('-=' * 30)
+print("-=" * 5, f"Bem Vindo Ao Jogo", "-=" * 5)
+print('-=' * 30)
+
+# Variavel
+numerousuario = int(input('Quantos palpites voce deseja: '))
+total = 1
+
+# Laço de repetição
+while total <= numerousuario:
+    for contador in range(0, 6):
+        numerosorteado = randint(0, 60)
+        if numerosorteado not in lista:
+            lista.append(numerosorteado)
+
+    lista.sort()
+    listacompleta.append(lista[:])
+    lista.clear()
+    total += 1
+#Mostrando na tala o resultado 
+for indice, linha in enumerate(listacompleta):
+    sleep(1)
+    print(f"JOGOS: {indice} = {linha}")
+print("-=" * 30)
+print("Fim do Palpite")
+

@@ -1,0 +1,8 @@
+# faça um algoritimo que leia o valor do veiculo e mostre quanto ele tem de desconto
+# Mostre seu novo valor do veiculo com deconto 15%.
+
+preço = float(input("Qual é o valor do veiculo: "))
+desconto = preço - (preço * 15 / 100) 
+
+
+print(f"Preço do veiculo R${preço:.2f}:\nVoce teve um desconto de 15% o preço do veiculo passara a ser  {desconto:.2f}: ")

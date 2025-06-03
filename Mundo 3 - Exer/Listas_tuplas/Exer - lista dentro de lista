@@ -1,0 +1,43 @@
+# Faça um programa que leia nome e peso de varias pessoas guardando tudo em uma lista
+# no final mostre 
+# Quantas pessoas foram cadastradas
+# Uma listagem de pessoas mais pesadas 
+# Uma lista de pessoas mais leves 
+
+dado = list()
+grupo = list()
+maior = 0
+menor = 0
+while True:
+    dado.append(str(input("Nome: ")))
+    dado.append(float(input("Peso: ")))
+
+    if len(grupo) == 0: # dentro da minha lista de grupo não tem nimguem cadastrado porque não guardei nada ainda
+        maior = dado[1] # Então o maior recebe dado que é = O  o dado 1 que o peso passa a ter o mair peso
+        menor = dado[1] # o dado 2 que o menor peso passa a ser o menor peso 
+    else:
+        if dado[1] > maior: # Se o dado[1] lido for maior que o maior anterior
+            maior = dado[1] # O maior recebe dado 
+        if dado[1] < menor: # Se o dado[1] lido for o menor que o menor anterior
+            menor = dado[1] # O menor dado recebe o dado        
+    grupo.append(dado[:])   # peguei os dado que estavam na lista dei uma copia e coloquei dentro de outra lista
+    dado.clear()            # Apaguei o dado da lista dar erro  
+     
+    continuar = " "
+    while continuar not in "SN":
+        continuar = str(input("Deseja Continuar (S/N)")).strip().upper()
+    if continuar == "S":
+        continue
+    elif continuar == "N":
+        break
+
+print(f"Foram cadastrada {len(grupo)} pessoa ")
+print(f"Os maiores peso foram de kg:{maior:.2f} foi o, ", end = " ")
+for pessoa in grupo:            # Olha minha lista de grupo,  para cada pessoa e pesso da lista de grupo
+    if pessoa[1] == maior:      # Se pessso como ta [1] da lista 0 e da posição 1 que o peso for igual o                            maior pesso terá mais uma pessoa com o maior peso no grupo
+        print(f",{pessoa[0]} ")
+print(f"Os menores peso foram de kg: {menor:.2f} foi o ", end = " ")
+for pessoa in grupo:
+    if pessoa[1] == menor:
+        print(f", {pessoa[0]}")
+

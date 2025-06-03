@@ -1,0 +1,24 @@
+# Faça um exercicios que leia o peso de cinco pessoa 
+# Mostra no final qual foi o peso maior e o peso menor 
+
+maior = 0
+menor = 0 
+# Utlilizei o 0 tanto o maior qunado o menor 
+ # Pense em um número? Vamos supor que seja o 7, o maior
+ #  # e o menor até agora sera o 7, porque ainda não leu
+ #  # Nenhum número, caso seja o primeiro laço, sempre sera o maior
+ #  # e menor, porque o program não leu mais nada diferente disso 
+for peso in range(1, 6):
+    peso_pessoa = float(input(f"Qual é seu peso:{peso}º "))
+    if peso == 1:      #  significa que eu estou lendo o pesso da primeira pessoa(isso vai acontecer no primeiro laço)          
+         maior = peso_pessoa  # O maior peso pessoa, passa a ser o maior, por ser o primeiro lido
+         menor = peso_pessoa  # O  menor tambem passa a ser menor, por ser o primeiro a ser lido
+
+    else: # Se não for o primeiro laço do for 
+        if peso_pessoa > maior: # Se o peso do proximo laço, for o maior 
+           maior = peso_pessoa  # Peso pessoa passa a ser maior 
+        if peso_pessoa < menor: # Se o peso pessoa,  for menor 
+            menor = peso_pessoa   # Menor peso pessoa passa a ser o menor 
+print(f"Peso maior {maior:.2f}\nMenor peso {menor:.2f}")
+
+

@@ -1,0 +1,13 @@
+# Crie um Programa que crie uma matriz de dimensão 3X3 e prencha com valores lidos pelo teclado
+# No final mostre na tela coma formatação correta 
+lista = []
+listacompleta = list()
+for contador in range (0, 9):
+    lista.append(int(input(f"Digite um valor: ")))
+    listacompleta.append(lista[:])
+    lista.clear()
+print(f"[ {listacompleta[0][0]} ][ {listacompleta[1][0]} ][ {listacompleta[2][0]} ] ")
+print(f"[ {listacompleta[3][0]} ][ {listacompleta[4][0]} ][ {listacompleta[5][0]} ] ")
+print(f"[ {listacompleta[6][0]} ][ {listacompleta[7][0]} ][ {listacompleta[8][0]} ] ") 
+
+  

@@ -1,0 +1,12 @@
+# faça um programa que leia uma frase pelo teclado e mostre 
+# Quantas vezes apareçe a letra A 
+# Em que posiçao ela aparece pela primeira vez 
+# Em que posição ela aparece pela ultima vez
+
+frase = str(input(" Digite uma frase: ")).lower().strip()
+quantatida_da_letra_a = frase.count('a')
+local_letra = frase.find('a')+1
+local_da_ultima_letra = frase.rfind('a')+1
+print(f"""Quantidade da letra A é de: {quantatida_da_letra_a}x
+primeirta letra se enconttra na posição:{local_letra}
+Ultima letra se encontra na posição : {local_da_ultima_letra}""")

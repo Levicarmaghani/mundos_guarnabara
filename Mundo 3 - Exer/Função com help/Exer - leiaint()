@@ -1,0 +1,15 @@
+# Crie um, programa que tenha a função leiaInt()
+# Vai funcionar da forma semelhante a função input
+# Ela vai fazer a validação para aceitar apenas um valor numérico
+
+def leiaInt(valor = "Digite um valor inteiro: "):
+    while True:
+        try: # Executa um codigo que pode gerar um erro
+            usuario = int(input(valor))
+            return usuario
+        except ValueError: # Se por acaso o usuario digita algum valor que não for un numero inteiro cai no excepte da erro
+            print("Erro apenas valores inteiros")
+
+    
+numero = leiaInt()
+print(f"Seu valor {numero}")

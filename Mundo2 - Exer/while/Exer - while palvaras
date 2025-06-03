@@ -1,0 +1,39 @@
+# faça um programa que jogue par ou impar com o pc
+# o jogo só sera interrompido quando o jogador perder
+# mostre o número de vitoria consegutivo 
+# que conquistou no final
+import random
+print("-=" * 20)
+print(f"BEM VINDO AO JOGO DE PAR OU IMPAR")
+contador = 1
+while True:
+    numero = int(input("Digite um valor: "))
+    usuario = str(input("Qual voce vai querer é P ou I: ")).strip().upper()[0]
+
+    numero_computador = random.randint(1, 10)
+    resultado = numero + numero_computador
+
+    if resultado % 2 == 0 : # Se o resto da disao for igual a zero é par 
+        if usuario == "P":
+            contador += 1
+            print(f"Parabens voce acertou!")
+            print("-=" * 20)
+            print(f"Voce jogou {numero} e o computador {numero_computador} resultado {resultado} è Par ")
+        else:
+            print(f"É um pena voce errou.")
+            break
+
+    elif resultado % 2 != 0: # Se o resto da divisão for diferete de zero é impar
+       if usuario == "I":
+            contador += 1
+            print(f"Parabens voce acertou!")
+            print("-=" * 20)
+            print(f"Voce jogou {numero} e o computador {numero_computador} e o resultado foi de {resultado}")
+       else:
+            print(f"É uma pena voce errou.")
+            break
+
+    else:
+       print("digito invalido, tente novamente")
+print(f"Voce acertou {contador}X ")
+   

@@ -1,0 +1,16 @@
+# Faça um programa que leia um número inteiro e calcule a tabuada
+
+numero = int(input("Digite um número pra ver sua tabuada: "))
+print('-' * 12)
+tabuada_1 = numero * 1
+tabuada_2 = numero * 2
+tabuada_3 = numero * 3
+tabuada_4 = numero * 4
+tabuada_5 = numero * 5
+tabuada_6 = numero * 6
+tabuada_7 = numero * 7
+tabuada_8 = numero * 8
+tabuada_9 = numero * 9
+tabuada_10 = numero * 10
+print(f"{numero}x1={tabuada_1}\n{numero}x2={tabuada_2}\n{numero}x3={tabuada_3}\n{numero}x4={tabuada_4}\n{numero}x5={tabuada_5}\n{numero}x6={tabuada_6}\n{numero}x7={tabuada_7}\n{numero}x8={tabuada_8}\n{numero}x9={tabuada_9}\n{numero}x10={tabuada_10}") 
+print('-' * 12)
